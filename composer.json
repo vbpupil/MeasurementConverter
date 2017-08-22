@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "vbpupil\\" : "src"
+    }
+  },
+  "require": {
+    "chippyash/strong-type": "^3.0",
+    "symfony/var-dumper": "^3.3"
+  }
+}

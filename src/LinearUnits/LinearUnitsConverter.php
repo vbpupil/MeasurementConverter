@@ -26,45 +26,64 @@ class LinearUnitsConverter extends LinearDefinitions
      * @var ImperialLinearUnit|MetricLinearUnit
      */
     protected $target;
+    /**
+     * @var
+     */
+    protected $targetType;
 
-    public function __construct(LinearUnit $src, StringType $convertTo)
+    public function __construct(LinearUnit $src, StringType $target)
     {
         parent::__construct();
 
         $this->src = $src;
-        $this->target = $this->convert($convertTo);
+        //todo we need to validate that the target type exists
+        $this->targetType =$target;
+        $this->target = $this->convert($target);
     }
 
-    public function convert(StringType $convertTo)
+    /**
+     * @param StringType $target
+     * @return ImperialLinearUnit|LinearUnit|MetricLinearUnit
+     */
+    public function convert(StringType $target)
     {
-        switch ($this->identify($convertTo)) {
+        switch ($this->identify($target)) {
             case 'metric':
                 if($this->src->getType() == 'metric'){
                     return $this->src;
                 }
 
-                return new MetricLinearUnit(new FloatType(1), new StringType('mm'));
-
+                return new MetricLinearUnit(
+                        new FloatType(
+                                $this->src->getValue(new StringType('in')) * $this->definitions['imperial']['mm']
+                            ), new StringType(
+                                $this->targetType
+                            )
+                    );
                 break;
             case 'imperial':
-                if($this->src->getType() == 'linear') {
+                if($this->src->getType() == 'imperial') {
                     return $this->src;
                 }
-
-                return new ImperialLinearUnit(new FloatType(1), new StringType('in'));
-
+                return new ImperialLinearUnit(
+                    new FloatType(
+                        $this->src->getValue(new StringType('mm')) / $this->definitions['metric']['in']
+                    ), new StringType(
+                        $this->targetType
+                    )
+                );
                 break;
         }
     }
 
     /**
-     * Identify who the convert to identifyer belongs to ie imperial or metric
-     * @param StringType $convertTo
+     * Identify who the target identifyer belongs to ie imperial or metric
+     * @param StringType $target
      */
-    public function identify(StringType $convertTo)
+    public function identify(StringType $target)
     {
         foreach ($this->identifier as $k => $v) {
-            if (in_array($convertTo->get(), $v)) {
+            if (in_array($target->get(), $v)) {
                 return $k;
             }
         }

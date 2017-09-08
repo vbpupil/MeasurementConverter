@@ -22,7 +22,10 @@ abstract class LinearUnit implements MeasurementUnit
      * @var array
      */
     protected $definitions;
-
+    /**
+     * @var
+     */
+    protected $originalType;
     /**
      * @var StringType
      */
@@ -119,8 +122,12 @@ abstract class LinearUnit implements MeasurementUnit
      * @param StringType $type
      * @return mixed
      */
-    public function getValue(StringType $type)
+    public function getValue(StringType $type = null)
     {
+        if(is_null($type)){
+            $type = $this->originalType;
+        }
+
         return $this->measurements[$type->get()]['measure'];
     }
 
@@ -128,8 +135,12 @@ abstract class LinearUnit implements MeasurementUnit
      * @param StringType $type
      * @return string
      */
-    public function getHumanReadableLong(StringType $type)
+    public function getHumanReadableLong(StringType $type=null)
     {
+        if(is_null($type)){
+            $type = $this->originalType;
+        }
+
         return "{$this->getValue($type)} {$this->definitions[$type->get()]['description']}";
     }
 

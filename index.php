@@ -11,17 +11,15 @@ use vbpupil\Metric\MetricLinearUnit;
 
 include_once 'vendor/autoload.php';
 
-//$metric = new MetricLinearUnit(new FloatType(5), new StringType('MILlimeter'));
-//dump($metric);
-//dump($metric->getHumanReadableLong(new StringType('cm')));
+$feet= new ImperialLinearUnit(new FloatType(50), new StringType('ft'));
+dump($feet->getHumanReadableLong());
 
+$converter = new LinearUnitsConverter($feet, new StringType('mm'));
 
-$inch = new ImperialLinearUnit(new FloatType(50), new StringType('in'));
-
-dump($inch);
-
-
-$converter = new LinearUnitsConverter($inch, new StringType('in'));
 $mm = $converter->get();
+dump($mm->getHumanReadableLong());
 
-dump($mm);
+$converter = new LinearUnitsConverter($mm, new StringType('in'));
+
+$inch = $converter->get();
+dump($inch->getHumanReadableLong());

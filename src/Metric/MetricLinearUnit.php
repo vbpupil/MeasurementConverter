@@ -37,6 +37,7 @@ class MetricLinearUnit extends LinearUnit
         $type = $this->definitionCheck($type);
 
         $this->metricType = 'metric';
+        $this->originalType = $type;
         $this->type = $type;
         $this->size = $size;
 

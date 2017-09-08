@@ -34,7 +34,10 @@ class ImperialLinearUnit extends LinearUnit
             'ml' => ['description' => new StringType('mile'), 'ratio' => new IntType(63360)]
         ];
 
+        $type = $this->definitionCheck($type);
+
         $this->metricType = 'imperial';
+        $this->originalType = $type;
         $this->type = $type;
         $this->size = $size;
 

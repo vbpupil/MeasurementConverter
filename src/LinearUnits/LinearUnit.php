@@ -15,7 +15,7 @@ use Chippyash\Type\Number\IntType;
 use Chippyash\Type\String\StringType;
 use vbpupil\MeasurementUnit;
 
-abstract class LinearUnits implements MeasurementUnit
+abstract class LinearUnit implements MeasurementUnit
 {
     /**
      * @var array
@@ -26,6 +26,10 @@ abstract class LinearUnits implements MeasurementUnit
      * @var StringType
      */
     protected $type;
+    /**
+     * @var
+     */
+    protected $metricType;
 
     /**
      * @var FloatType

@@ -1,10 +1,9 @@
 <?php
 /**
- * Freetimers Web Application Framework
- *
- * @author    Dean Haines
- * @copyright Freetimers Communications Ltd, 21/08/2017, UK
- * @license   Proprietary See LICENSE.md
+ * Created by PhpStorm.
+ * User: dean
+ * Date: 22/08/17
+ * Time: 18:07
  */
 
 namespace vbpupil\Metric;
@@ -13,10 +12,12 @@ namespace vbpupil\Metric;
 use Chippyash\Type\Number\FloatType;
 use Chippyash\Type\Number\IntType;
 use Chippyash\Type\String\StringType;
-use vbpupil\LinearUnits\LinearUnits;
+use vbpupil\LinearUnits\LinearUnit;
 
-class MetricLinearUnits extends LinearUnits
+class MetricLinearUnit extends LinearUnit
 {
+    const MEASURETYPE = 'linear';
+    const METRICTYPE = 'metric';
     /**
      * MetricLinearUnits constructor.
      * @param FloatType $size
@@ -34,6 +35,7 @@ class MetricLinearUnits extends LinearUnits
 
         $type = $this->definitionCheck($type);
 
+        $this->metricType = 'metric';
         $this->type = $type;
         $this->size = $size;
 

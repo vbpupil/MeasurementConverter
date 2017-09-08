@@ -1,10 +1,9 @@
 <?php
 /**
- * Freetimers Web Application Framework
- *
- * @author    Dean Haines
- * @copyright Freetimers Communications Ltd, 21/08/2017, UK
- * @license   Proprietary See LICENSE.md
+ * Created by PhpStorm.
+ * User: dean
+ * Date: 22/08/17
+ * Time: 18:07
  */
 
 namespace vbpupil\Imperial;
@@ -13,10 +12,13 @@ namespace vbpupil\Imperial;
 use Chippyash\Type\Number\FloatType;
 use Chippyash\Type\Number\IntType;
 use Chippyash\Type\String\StringType;
-use vbpupil\LinearUnits\LinearUnits;
+use vbpupil\LinearUnits\LinearUnit;
 
-class ImperialLinearUnits extends LinearUnits
+class ImperialLinearUnit extends LinearUnit
 {
+    const MEASURETYPE = 'linear';
+    const METRICTYPE = 'imperial';
+
     /**
      * ImperialLinearUnits constructor.
      * @param FloatType $size
@@ -31,6 +33,7 @@ class ImperialLinearUnits extends LinearUnits
             'ml' => ['description' => new StringType('mile'), 'ratio' => new IntType(63360)]
         ];
 
+        $this->metricType = 'imperial';
         $this->type = $type;
         $this->size = $size;
 

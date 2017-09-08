@@ -14,50 +14,45 @@ use Chippyash\Type\String\StringType;
 use vbpupil\Imperial\ImperialLinearUnit;
 use vbpupil\Metric\MetricLinearUnit;
 
-class LinearUnitsConverter
+class LinearUnitsConverter extends LinearDefinitions
 {
-    protected $identifier;
+
     /**
-     * @var
+     * @var LinearUnit
      */
     protected $src;
+
     /**
-     * @var array
+     * @var ImperialLinearUnit|MetricLinearUnit
      */
-    protected $definitions = [];
+    protected $target;
 
     public function __construct(LinearUnit $src, StringType $convertTo)
     {
-        $this->definitions = [
-                'linear' => [
-                    'imperial' => [
-                        'mm' => 25.4
-                    ],
-                    'metric' => [
-                        'in' => 25.4
-                    ]
-                ]
-            ];
-
-        $this->identifier = [
-            'metric' => ['mm','cm','m','km','millimeter','centimeter','metre','kilometer'],
-            'imperial' => ['in','ft','yd','ml','inch','foot','yard','mile']
-        ];
+        parent::__construct();
 
         $this->src = $src;
         $this->target = $this->convert($convertTo);
-
-        dump ($this->target);
     }
 
     public function convert(StringType $convertTo)
     {
-        switch($this->identify($convertTo)){
+        switch ($this->identify($convertTo)) {
             case 'metric':
+                if($this->src->getType() == 'metric'){
+                    return $this->src;
+                }
+
                 return new MetricLinearUnit(new FloatType(1), new StringType('mm'));
+
                 break;
             case 'imperial':
+                if($this->src->getType() == 'linear') {
+                    return $this->src;
+                }
+
                 return new ImperialLinearUnit(new FloatType(1), new StringType('in'));
+
                 break;
         }
     }
@@ -68,10 +63,15 @@ class LinearUnitsConverter
      */
     public function identify(StringType $convertTo)
     {
-        foreach ($this->identifier as $k => $v){
-                if(in_array($convertTo->get(),$v)){
-                    return $k;
-                }
+        foreach ($this->identifier as $k => $v) {
+            if (in_array($convertTo->get(), $v)) {
+                return $k;
+            }
         }
+    }
+
+    public function get()
+    {
+        return $this->target;
     }
 }

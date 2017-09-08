@@ -17,6 +17,7 @@ use vbpupil\LinearUnits\LinearUnit;
 class MetricLinearUnit extends LinearUnit
 {
     const MEASURETYPE = 'linear';
+
     const METRICTYPE = 'metric';
     /**
      * MetricLinearUnits constructor.
@@ -40,5 +41,10 @@ class MetricLinearUnit extends LinearUnit
         $this->size = $size;
 
         $this->setValues();
+    }
+
+    public function getType()
+    {
+        return self::METRICTYPE;
     }
 }

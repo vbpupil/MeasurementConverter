@@ -15,6 +15,7 @@ use Chippyash\Type\Number\IntType;
 use Chippyash\Type\String\StringType;
 use vbpupil\MeasurementUnit;
 
+
 abstract class LinearUnit implements MeasurementUnit
 {
     /**
@@ -140,4 +141,6 @@ abstract class LinearUnit implements MeasurementUnit
     {
         return "{$this->getValue($type)} {$type->get()}";
     }
+
+
 }

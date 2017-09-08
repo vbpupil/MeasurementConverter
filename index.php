@@ -16,9 +16,12 @@ include_once 'vendor/autoload.php';
 //dump($metric->getHumanReadableLong(new StringType('cm')));
 
 
-$inch = new ImperialLinearUnit(new FloatType(1), new StringType('in'));
-//dump($inch);
-//dump($inch->getHumanReadableLong(new StringType('in')));
+$inch = new ImperialLinearUnit(new FloatType(50), new StringType('in'));
 
-$mm = new LinearUnitsConverter($inch, new StringType('mm'));
+dump($inch);
+
+
+$converter = new LinearUnitsConverter($inch, new StringType('in'));
+$mm = $converter->get();
+
 dump($mm);

@@ -148,8 +148,12 @@ abstract class LinearUnit implements MeasurementUnit
      * @param StringType $type
      * @return string
      */
-    public function getHumanReadableShort(StringType $type)
+    public function getHumanReadableShort(StringType $type=null)
     {
+        if(is_null($type)){
+            $type = $this->originalType;
+        }
+
         return "{$this->getValue($type)} {$type->get()}";
     }
 

@@ -7,5 +7,8 @@
   "require": {
     "chippyash/strong-type": "^3.0",
     "symfony/var-dumper": "^3.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "*"
   }
 }

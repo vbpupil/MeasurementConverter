@@ -141,7 +141,9 @@ abstract class LinearUnit implements MeasurementUnit
             $type = $this->originalType;
         }
 
-        return "{$this->getValue($type)} {$this->definitions[$type->get()]['description']}";
+        $descriptor = ($this->getValue($type) > 1 ? $this->definitions[$type->get()]['plural'][1] : $this->definitions[$type->get()]['plural'][0]);
+
+        return "{$this->getValue($type)} {$descriptor}";
     }
 
     /**

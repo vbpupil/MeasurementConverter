@@ -27,11 +27,11 @@ class MetricLinearUnit extends LinearUnit
     public function __construct(FloatType $size, StringType $type)
     {
         $this->definitions = [
-            'mm' => ['description' => new StringType('millimeter'), 'ratio' => new IntType(1)],
-            'cm' => ['description' => new StringType('centimeter'), 'ratio' => new IntType(10)],
-            'dm' => ['description' => new StringType('decimeter'), 'ratio' => new IntType(100)],
-            'm' => ['description' => new StringType('metre'), 'ratio' => new IntType(1000)],
-            'km' => ['description' => new StringType('kilometer'), 'ratio' => new IntType(1000000)]
+            'mm' => ['description' => new StringType('millimeter'), 'ratio' => new IntType(1),'plural' => [new StringType('millimeter'), new StringType('millimeters')]],
+            'cm' => ['description' => new StringType('centimeter'), 'ratio' => new IntType(10),'plural' => [new StringType('centimeter'), new StringType('centimeters')]],
+            'dm' => ['description' => new StringType('decimeter'), 'ratio' => new IntType(100),'plural' => [new StringType('decimeter'), new StringType('decimeters')]],
+            'm' => ['description' => new StringType('metre'), 'ratio' => new IntType(1000),'plural' => [new StringType('metre'), new StringType('metres')]],
+            'km' => ['description' => new StringType('kilometer'), 'ratio' => new IntType(1000000),'plural' => [new StringType('kilometer'), new StringType('kilometers')]]
         ];
 
         $type = $this->definitionCheck($type);

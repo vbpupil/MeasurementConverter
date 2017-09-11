@@ -1,7 +1,13 @@
 # Measurement Converter
 A simple but effective measurement converter which allows you to 
-quickly create measurement objects that can be converted into other 
-measurement formats quickly and easily.
+quickly create measurement objects that can be easily converted into other 
+measurement formats, for example converting an Imperial measurement into Metric.
+
+By creating a measurement unit object you immediately inherit the values of that 
+conversion to your units counterparts. For example, by creating a **1 Inch Object**
+you also have access to the **Feet**, **Yard** & **Mile** measurements off the bat
+
+At the moment **ONLY** Linear units have been accounted for. 
 
 ### Usage Example
 ```php

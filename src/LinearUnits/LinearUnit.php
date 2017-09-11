@@ -43,7 +43,7 @@ abstract class LinearUnit implements MeasurementUnit
     /**
      * @var array
      */
-    protected $measurements = [];
+    public $measurements = [];
 
     /**
      * LinearUnits constructor.

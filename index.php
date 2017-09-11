@@ -25,9 +25,14 @@ include_once 'vendor/autoload.php';
 //$inch = $converter->get();
 //dump($inch->getHumanReadableLong());
 
-$width = new MetricLinearUnit(new FloatType(10), new StringType('cm'));
+$width = new MetricLinearUnit(new FloatType(1), new StringType('m'));
 $depth = new MetricLinearUnit(new FloatType(20), new StringType('cm'));
-$height = new MetricLinearUnit(new FloatType(15), new StringType('cm'));
+$height = new MetricLinearUnit(new FloatType(1500), new StringType('mm'));
+
+
+//$width = new MetricLinearUnit(new FloatType(10), new StringType('cm'));
+//$depth = new MetricLinearUnit(new FloatType(20), new StringType('cm'));
+//$height = new MetricLinearUnit(new FloatType(15), new StringType('cm'));
 
 $cubic = new CubicUnit($width, $depth, $height);
 

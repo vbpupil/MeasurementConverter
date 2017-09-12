@@ -15,9 +15,11 @@ By creating a measurement unit object you immediately inherit the values of that
 conversion to your units counterparts. For example, by creating a **1 Inch Object**
 you also have access to the **Feet**, **Yard** & **Mile** measurements off the bat
 
-At the moment **ONLY** Linear units have been accounted for. 
+At the moment **ONLY** Linear & Cubic units have been accounted for. 
 
-### Usage Example
+### Usage Examples
+
+#### Metric Example
 ```php
 //create a 50 foot object
 $feet= new ImperialLinearUnit(new FloatType(50), new StringType('ft'));
@@ -38,3 +40,12 @@ $inch = $converter->get();
 dump($inch->getHumanReadableLong());
 ```
 
+### Cubic Example
+
+```php
+$width = new MetricLinearUnit(new FloatType(1), new StringType('m'));
+$depth = new MetricLinearUnit(new FloatType(20), new StringType('cm'));
+$height = new MetricLinearUnit(new FloatType(1500), new StringType('mm'));
+
+dump($cubic->getValue(new StringType('mm')));
+```

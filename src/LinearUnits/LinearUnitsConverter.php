@@ -77,7 +77,7 @@ class LinearUnitsConverter extends LinearDefinitions
     }
 
     /**
-     * Identify who the target identifyer belongs to ie imperial or metric
+     * Identify who the target identifier belongs to ie imperial or metric
      * @param StringType $target
      */
     public function identify(StringType $target)

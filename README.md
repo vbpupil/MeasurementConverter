@@ -1,3 +1,11 @@
+## Quality Assurance
+
+![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
+![PHP 7](https://img.shields.io/badge/PHP-7-blue.svg)
+[![Build Status](https://travis-ci.org/vbpupil/MeasurementConverter.svg?branch=master)](https://travis-ci.org/vbpupil/MeasurementConverter)
+[![Code Climate](https://codeclimate.com/github/vbpupil/MeasurementConverter/badges/gpa.svg)](https://codeclimate.com/github/vbpupil/MeasurementConverter)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 # Measurement Converter
 A simple but effective measurement converter which allows you to 
 quickly create measurement objects that can be easily converted into other 

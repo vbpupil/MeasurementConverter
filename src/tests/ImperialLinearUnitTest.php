@@ -30,7 +30,7 @@ class ImperialLinearUnitTest extends TestCase
 
     public function testHumanReadableStrings()
     {
-        $this->assertEquals('50 foot', $this->sut->getHumanReadableLong());
+        $this->assertEquals('50 feet', $this->sut->getHumanReadableLong());
         $this->assertEquals('50 ft', $this->sut->getHumanReadableShort());
     }
 

@@ -30,7 +30,7 @@ class MetricLinearUnitTest extends TestCase
 
     public function testHumanReadableStrings()
     {
-        $this->assertEquals('50 centimeter', $this->sut->getHumanReadableLong());
+        $this->assertEquals('50 centimeters', $this->sut->getHumanReadableLong());
         $this->assertEquals('50 cm', $this->sut->getHumanReadableShort());
     }
 

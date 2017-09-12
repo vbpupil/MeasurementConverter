@@ -10,6 +10,7 @@ namespace vbpupil\Cubic;
 
 
 use Chippyash\Type\String\StringType;
+use PHPUnit\Runner\Exception;
 use vbpupil\LinearUnits\LinearUnit;
 
 class CubicUnit
@@ -40,6 +41,10 @@ class CubicUnit
      */
     public function __construct(LinearUnit $width, LinearUnit $depth, LinearUnit $height)
     {
+        if(get_class($width) != get_class($depth) || get_class($depth) != get_class($height)){
+            throw new Exception('Units must be of the same type ie Metric');
+        }
+
         $this->height = $height;
         $this->depth = $depth;
         $this->width = $width;
@@ -67,10 +72,5 @@ class CubicUnit
     public function getHumanReadableLong(StringType $type)
     {
         return "{$this->getValue($type)} {$type}&sup3;";
-    }
-
-    public function getHumanReadableShort()
-    {
-
     }
 }

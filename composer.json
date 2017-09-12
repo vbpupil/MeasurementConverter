@@ -1,4 +1,8 @@
 {
+
+  "name" : "vbpupil/MeasurementConverter",
+  "description" : "A simple but effective measurement converter which allows you to quickly create measurement objects that can be easily converted into other measurement formats, for example converting an Imperial measurement into Metric.",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "vbpupil\\" : "src"

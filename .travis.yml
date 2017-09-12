@@ -30,8 +30,3 @@ script:
 # configure notifications (email, IRC, campfire etc)
 notifications:
   email: "vbpupil@gmail.com"
-
-# whitelist
-branches:
-  only:
-    - test

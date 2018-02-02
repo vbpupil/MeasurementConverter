@@ -12,6 +12,9 @@ use Chippyash\Type\String\StringType;
 use PHPUnit\Runner\Exception;
 use vbpupil\LinearUnits\LinearUnitInterface;
 
+/**
+ * Class CubicUnit
+ */
 class CubicUnit
 {
     /**
@@ -51,6 +54,9 @@ class CubicUnit
         $this->calculate();
     }
 
+    /**
+     *
+     */
     public function calculate()
     {
         foreach ($this->width->measurements as $k => $v){
@@ -63,11 +69,19 @@ class CubicUnit
         }
     }
 
+    /**
+     * @param StringType $type
+     * @return mixed
+     */
     public function getValue(StringType $type)
     {
         return $this->cubic[$type->get()];
     }
 
+    /**
+     * @param StringType $type
+     * @return string
+     */
     public function getHumanReadableLong(StringType $type)
     {
         return "{$this->getValue($type)} {$type}&sup3;";

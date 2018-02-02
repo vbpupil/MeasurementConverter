@@ -13,6 +13,9 @@ use Chippyash\Type\String\StringType;
 use vbpupil\Imperial\ImperialLinearUnit;
 use vbpupil\Metric\MetricLinearUnit;
 
+/**
+ * Class LinearUnitsConverter
+ */
 class LinearUnitsConverter extends LinearDefinitions
 {
 
@@ -30,6 +33,11 @@ class LinearUnitsConverter extends LinearDefinitions
      */
     protected $targetType;
 
+    /**
+     * LinearUnitsConverter constructor.
+     * @param LinearUnitInterface $src
+     * @param StringType $target
+     */
     public function __construct(LinearUnitInterface $src, StringType $target)
     {
         parent::__construct();
@@ -88,6 +96,9 @@ class LinearUnitsConverter extends LinearDefinitions
         }
     }
 
+    /**
+     * @return ImperialLinearUnit|LinearUnitInterface|MetricLinearUnit
+     */
     public function get()
     {
         return $this->target;

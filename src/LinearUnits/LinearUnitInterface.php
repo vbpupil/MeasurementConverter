@@ -14,6 +14,9 @@ use Chippyash\Type\String\StringType;
 use vbpupil\MeasurementUnitInterface;
 
 
+/**
+ * Class LinearUnitInterface
+ */
 abstract class LinearUnitInterface implements MeasurementUnitInterface
 {
     /**

@@ -8,6 +8,9 @@
  */
 namespace vbpupil\LinearUnits;
 
+/**
+ * Class LinearDefinitions
+ */
 class LinearDefinitions
 {
     /**

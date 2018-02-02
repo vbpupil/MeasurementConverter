@@ -13,10 +13,19 @@ use Chippyash\Type\Number\IntType;
 use Chippyash\Type\String\StringType;
 use vbpupil\LinearUnits\LinearUnitInterface;
 
+/**
+ * Class MetricLinearUnit
+ */
 class MetricLinearUnit extends LinearUnitInterface
 {
+    /**
+     *
+     */
     const MEASURETYPE = 'linear';
 
+    /**
+     *
+     */
     const METRICTYPE = 'metric';
 
     /**
@@ -45,6 +54,9 @@ class MetricLinearUnit extends LinearUnitInterface
         $this->setValues();
     }
 
+    /**
+     * @return string
+     */
     public function getType()
     {
         return self::METRICTYPE;

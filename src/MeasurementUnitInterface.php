@@ -13,7 +13,6 @@ use Chippyash\Type\String\StringType;
 
 /**
  * Interface MeasurementUnit
- * @package vbpupil
  */
 interface MeasurementUnitInterface
 {

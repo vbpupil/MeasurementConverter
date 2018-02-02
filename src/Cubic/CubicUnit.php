@@ -1,17 +1,16 @@
 <?php
 /**
- * CubicUnit*
+ * Measurement Converter
+ *
  * @author: Dean Haines
- * @copyright: Dean Haines, 2017, UK
+ * @copyright: Dean Haines, 2018, UK
  * @license: GPL V3.0+ See LICENSE.md
  */
-
 namespace vbpupil\Cubic;
-
 
 use Chippyash\Type\String\StringType;
 use PHPUnit\Runner\Exception;
-use vbpupil\LinearUnits\LinearUnit;
+use vbpupil\LinearUnits\LinearUnitInterface;
 
 class CubicUnit
 {
@@ -35,11 +34,11 @@ class CubicUnit
 
     /**
      * CubicUnit constructor.
-     * @param LinearUnit $width
-     * @param LinearUnit $depth
-     * @param LinearUnit $height
+     * @param LinearUnitInterface $width
+     * @param LinearUnitInterface $depth
+     * @param LinearUnitInterface $height
      */
-    public function __construct(LinearUnit $width, LinearUnit $depth, LinearUnit $height)
+    public function __construct(LinearUnitInterface $width, LinearUnitInterface $depth, LinearUnitInterface $height)
     {
         if(get_class($width) != get_class($depth) || get_class($depth) != get_class($height)){
             throw new Exception('Units must be of the same type ie Metric');

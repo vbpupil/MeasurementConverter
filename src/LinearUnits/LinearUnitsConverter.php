@@ -1,13 +1,12 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: dean
- * Date: 22/08/17
- * Time: 18:07
+ * Measurement Converter
+ *
+ * @author: Dean Haines
+ * @copyright: Dean Haines, 2018, UK
+ * @license: GPL V3.0+ See LICENSE.md
  */
-
 namespace vbpupil\LinearUnits;
-
 
 use Chippyash\Type\Number\FloatType;
 use Chippyash\Type\String\StringType;
@@ -18,7 +17,7 @@ class LinearUnitsConverter extends LinearDefinitions
 {
 
     /**
-     * @var LinearUnit
+     * @var LinearUnitInterface
      */
     protected $src;
 
@@ -31,7 +30,7 @@ class LinearUnitsConverter extends LinearDefinitions
      */
     protected $targetType;
 
-    public function __construct(LinearUnit $src, StringType $target)
+    public function __construct(LinearUnitInterface $src, StringType $target)
     {
         parent::__construct();
 
@@ -43,7 +42,7 @@ class LinearUnitsConverter extends LinearDefinitions
 
     /**
      * @param StringType $target
-     * @return ImperialLinearUnit|LinearUnit|MetricLinearUnit
+     * @return ImperialLinearUnit|LinearUnitInterface|MetricLinearUnit
      */
     public function convert(StringType $target)
     {

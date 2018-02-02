@@ -1,20 +1,19 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: dean
- * Date: 22/08/17
- * Time: 18:07
+ * Measurement Converter
+ *
+ * @author: Dean Haines
+ * @copyright: Dean Haines, 2018, UK
+ * @license: GPL V3.0+ See LICENSE.md
  */
-
 namespace vbpupil\Imperial;
-
 
 use Chippyash\Type\Number\FloatType;
 use Chippyash\Type\Number\IntType;
 use Chippyash\Type\String\StringType;
-use vbpupil\LinearUnits\LinearUnit;
+use vbpupil\LinearUnits\LinearUnitInterface;
 
-class ImperialLinearUnit extends LinearUnit
+class ImperialLinearUnit extends LinearUnitInterface
 {
     const MEASURETYPE = 'linear';
 
@@ -24,6 +23,7 @@ class ImperialLinearUnit extends LinearUnit
      * ImperialLinearUnits constructor.
      * @param FloatType $size
      * @param StringType $type
+     * @throws \Exception
      */
     public function __construct(FloatType $size, StringType $type)
     {

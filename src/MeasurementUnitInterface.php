@@ -1,8 +1,12 @@
 <?php
-
-
+/**
+ * Measurement Converter
+ *
+ * @author: Dean Haines
+ * @copyright: Dean Haines, 2018, UK
+ * @license: GPL V3.0+ See LICENSE.md
+ */
 namespace vbpupil;
-
 
 use Chippyash\Type\Number\FloatType;
 use Chippyash\Type\String\StringType;
@@ -11,7 +15,7 @@ use Chippyash\Type\String\StringType;
  * Interface MeasurementUnit
  * @package vbpupil
  */
-interface MeasurementUnit
+interface MeasurementUnitInterface
 {
     /**
      * MeasurementUnit constructor.

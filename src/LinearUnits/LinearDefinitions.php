@@ -1,14 +1,12 @@
 <?php
 /**
- * Freetimers Web Application Framework
+ * Measurement Converter
  *
- * @author    Dean Haines
- * @copyright Freetimers Communications Ltd, 08/09/2017, UK
- * @license   Proprietary See LICENSE.md
+ * @author: Dean Haines
+ * @copyright: Dean Haines, 2018, UK
+ * @license: GPL V3.0+ See LICENSE.md
  */
-
 namespace vbpupil\LinearUnits;
-
 
 class LinearDefinitions
 {

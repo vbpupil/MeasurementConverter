@@ -1,28 +1,29 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: dean
- * Date: 22/08/17
- * Time: 18:07
+ * Measurement Converter
+ *
+ * @author: Dean Haines
+ * @copyright: Dean Haines, 2018, UK
+ * @license: GPL V3.0+ See LICENSE.md
  */
-
 namespace vbpupil\Metric;
-
 
 use Chippyash\Type\Number\FloatType;
 use Chippyash\Type\Number\IntType;
 use Chippyash\Type\String\StringType;
-use vbpupil\LinearUnits\LinearUnit;
+use vbpupil\LinearUnits\LinearUnitInterface;
 
-class MetricLinearUnit extends LinearUnit
+class MetricLinearUnit extends LinearUnitInterface
 {
     const MEASURETYPE = 'linear';
 
     const METRICTYPE = 'metric';
+
     /**
      * MetricLinearUnits constructor.
      * @param FloatType $size
      * @param StringType $type
+     * @throws \Exception
      */
     public function __construct(FloatType $size, StringType $type)
     {

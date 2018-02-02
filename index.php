@@ -39,4 +39,3 @@ $cubic = new CubicUnit($width, $depth, $height);
 dump($cubic);
 dump($cubic->getValue(new StringType('mm')));
 echo($cubic->getHumanReadableLong(new StringType('cm')));
-

@@ -1,22 +1,20 @@
 <?php
 /**
- * Freetimers Web Application Framework
+ * Measurement Converter
  *
- * @author    Dean Haines
- * @copyright Freetimers Communications Ltd, 21/08/2017, UK
- * @license   Proprietary See LICENSE.md
+ * @author: Dean Haines
+ * @copyright: Dean Haines, 2018, UK
+ * @license: GPL V3.0+ See LICENSE.md
  */
-
 namespace vbpupil\LinearUnits;
-
 
 use Chippyash\Type\Number\FloatType;
 use Chippyash\Type\Number\IntType;
 use Chippyash\Type\String\StringType;
-use vbpupil\MeasurementUnit;
+use vbpupil\MeasurementUnitInterface;
 
 
-abstract class LinearUnit implements MeasurementUnit
+abstract class LinearUnitInterface implements MeasurementUnitInterface
 {
     /**
      * @var array

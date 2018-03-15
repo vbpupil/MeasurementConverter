@@ -8,6 +8,7 @@ use vbpupil\Cubic\CubicUnit;
 use vbpupil\Imperial\ImperialLinearUnit;
 use vbpupil\LinearUnits\LinearUnitsConverter;
 use vbpupil\Metric\MetricLinearUnit;
+use vbpupil\Weight\WeightTonnageDensityConverter;
 
 
 include_once 'vendor/autoload.php';
@@ -25,9 +26,9 @@ include_once 'vendor/autoload.php';
 //$inch = $converter->get();
 //dump($inch->getHumanReadableLong());
 
-$width = new MetricLinearUnit(new FloatType(1), new StringType('m'));
-$depth = new MetricLinearUnit(new FloatType(20), new StringType('cm'));
-$height = new MetricLinearUnit(new FloatType(1500), new StringType('mm'));
+$width = new MetricLinearUnit(new FloatType(18), new StringType('m'));
+$depth = new MetricLinearUnit(new FloatType(42), new StringType('m'));
+$height = new MetricLinearUnit(new FloatType(3), new StringType('cm'));
 
 
 //$width = new MetricLinearUnit(new FloatType(10), new StringType('cm'));
@@ -36,6 +37,7 @@ $height = new MetricLinearUnit(new FloatType(1500), new StringType('mm'));
 
 $cubic = new CubicUnit($width, $depth, $height);
 
+$tonnage = new WeightTonnageDensityConverter('soil', $cubic);
+
 dump($cubic);
-dump($cubic->getValue(new StringType('mm')));
-echo($cubic->getHumanReadableLong(new StringType('cm')));
+dump($tonnage->getValue());

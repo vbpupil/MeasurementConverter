@@ -6,7 +6,9 @@
  * @copyright: Dean Haines, 2018, UK
  * @license: GPL V3.0+ See LICENSE.md
  */
+
 namespace vbpupil\LinearUnits;
+use Exception;
 
 /**
  * Class LinearDefinitions
@@ -41,5 +43,22 @@ class LinearDefinitions
             ]
 
         ];
+    }
+
+    /**
+     * identify if metric/imperial by passing in the type ie, cm/yd/ft
+     * @param $type
+     * @return bool|false|int|string
+     * @throws Exception
+     */
+    public function identifySystem($type)
+    {
+        foreach ($this->identifier as $k => $v) {
+            if (array_search($type, $v) !== false) {
+                return $k;
+            }
+        }
+
+        throw new Exception('Unsupported measuring system.');
     }
 }

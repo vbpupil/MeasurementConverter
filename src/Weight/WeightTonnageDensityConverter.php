@@ -78,7 +78,7 @@ class WeightTonnageDensityConverter
         'wood_birch' => 650,
         'wood_bud' => 690,
         'wood_cork' => 480,
-        'wood._larch' => 660,
+        'wood_larch' => 660,
         'wood_linden' => 530,
         'wood_pine' => 520,
         'wood_spruce' => 450,

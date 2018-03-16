@@ -72,7 +72,7 @@ $inch = $converter->get();
 dump($inch->getHumanReadableLong());
 ```
 
-### Cubic Example
+#### Cubic Example
 **1. create a width, depth & height object and pass these into the cubic constructor**
 ```php
 $width = LinearUnitBuilder::build(new FloatType(18), new StringType('m'));
@@ -83,7 +83,7 @@ $cubic = new CubicUnit($width, $depth, $height);
 dump($cubic->getValue(new StringType('mm')));
 ```
 
-### Weight Example
+#### Weight Example
 **1. to convert the cubic measurement into a weight simply pass in the SUPPORTED matrial name & cubic object**
 ```php
 $tonnage = new WeightTonnageDensityConverter('soil', $cubic);
@@ -93,7 +93,7 @@ dump($tonnage->getValue());
 ```
 
 
-### Supported Weight Materials & Densities
+#### Supported Weight Materials & Densities
 
 |Material|Density, kg/m3|
 | ------------- | ------------- |

@@ -93,7 +93,7 @@ dump($tonnage->getValue());
 ```
 
 
-#### Supported Weight Materials & Densities
+#### Supported Materials & Densities
 
 |Material|Density, kg/m3|
 | ------------- | ------------- |

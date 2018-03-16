@@ -25,7 +25,23 @@ By creating a linear measurement unit object you immediately inherit the values 
 conversion to your units counterparts. For example, by creating a **1 Inch Object**
 you also have access to the **Feet**, **Yard** & **Mile** measurements off the bat
 
-At the moment **ONLY** Linear & Cubic units have been accounted for. 
+####Supported Units
+|Type|Unit|Identified|
+|----|----|----|
+|Linear Metric|||
+||Millemeter|mm|
+||Centimeter|cm|
+||Meter|m|
+||Kilometer|km|
+|Linear Imperial|||
+||Inch|in|
+||Feet|ft|
+||Yard|yd|
+||Mile|ml|
+|Weight|||
+||Tonne||
+||US Ton||
+||Imperial Ton||
 
 ### Usage Examples
 
@@ -77,120 +93,120 @@ dump($tonnage->getValue());
 ```
 
 
-### Supported Weight Densities
+### Supported Weight Materials & Densities
 
-|Material|
-| ------------- |
-|air|
-|alcohol|
-|antifreeze|
-|asphalt|
-|azote|
-|beer|
-|brass|
-|bronze|
-|butter|
-|cadmium|
-|caprolon|
-|cast_iron|
-|cement|
-|concrete|
-|copper|
-|diesel|
-|fiberglass|
-|fluoroplast|
-|garbage|
-|glass|
-|gold|
-|ground|
-|ice|
-|indium|
-|kerosene|
-|lead|
-|methane|
-|milk|
-|oil|
-|oxygen|
-|paint|
-|paladius|
-|paper|
-|petrol|
-|platinum|
-|polyamide|
-|polycarbonate|
-|polyethylene|
-|polypropylene|
-|polystyrene|
-|polyvinyl_chloride|
-|propane|
-|rubber|
-|sand|
-|silver|
-|soil|
-|steel|
-|steel|
-|stone|
-|tin|
-|tungsten|
-|viniplast|
-|water|
-|wood_birch|
-|wood_bud|
-|wood_cork|
-|wood_larch|
-|wood_linden|
-|wood_pine|
-|wood_spruce|
-|zinc|
-|porcelain|
-|liquid_hydrogen|
-|ether|
-|gasoline|
-|kerosene|
-|diesel|
-|acetone|
-|methyl_alcohol|
-|oil|
-|sunflower oil|
-|olive_oil|
-|water|
-|sea_water|
-|glycerin|
-|sulfuric_acid|
-|mercury|
-|sand|
-|crushed stone|
-|asphalt|
-|gravel|
-|concrete solution|
-|slag|
-|clay|
-|snow|
-|nitrogen|
-|ammonia|
-|argon|
-|acetylene|
-|hydrogen|
-|air|
-|helium|
-|nitrous_oxide|
-|oxygen|
-|krypton|
-|xenon|
-|methane|
-|neon|
-|ozone|
-|nitric_oxide|
-|propane|
-|radon|
-|trimethylamine|
-|carbon_dioxide|
-|carbon_monoxide|
-|carbon_dioxide|
-|phosphorous_fluoride|
-|fluorine|
-|nitrogen_fluoride|
-|chlorine|
-|dioxide_of_chlorine|
-|chlorine_oxide|
-|ethane|
+|Material|Density, kg/m3|
+| ------------- | ------------- |
+|air | 1.928|
+|alcohol | 789|
+|antifreeze | 1112|
+|asphalt | 1100|
+|azote | 1.251|
+|beer | 1041|
+|brass | 8500|
+|bronze | 8600|
+|butter | 920|
+|cadmium | 8640|
+|caprolon | 1150|
+|cast_iron | 7300|
+|cement | 2900|
+|concrete | 2400|
+|copper | 8900|
+|diesel | 860|
+|fiberglass | 1900|
+|fluoroplast | 1400|
+|garbage | 250|
+|glass | 2500|
+|gold | 19300|
+|ground | 1800|
+|ice | 917|
+|indium | 7300|
+|kerosene | 810|
+|lead | 11400|
+|methane | 0.6682|
+|milk | 1030|
+|oil | 850|
+|oxygen | 1.429|
+|paint | 1300|
+|paladius | 12160|
+|paper | 950|
+|petrol | 750|
+|platinum | 21450|
+|polyamide | 1150|
+|polycarbonate | 1200|
+|polyethylene | 960|
+|polypropylene | 900|
+|polystyrene | 1050|
+|polyvinyl_chloride | 1400|
+|propane | 1.864|
+|rubber | 1050|
+|sand | 1800|
+|silver | 11500|
+|soil | 1800|
+|steel | 7800|
+|steel | 7800|
+|stone | 2200|
+|tin | 7300|
+|tungsten | 19300|
+|viniplast | 1450|
+|water | 1000|
+|wood_birch | 650|
+|wood_bud | 690|
+|wood_cork | 480|
+|wood._larch | 660|
+|wood_linden | 530|
+|wood_pine | 520|
+|wood_spruce | 450|
+|zinc | 7130|
+|porcelain | 2300|
+|liquid_hydrogen | 70|
+|ether | 740|
+|gasoline | 750|
+|kerosene | 810|
+|diesel | 845|
+|acetone | 795|
+|methyl_alcohol | 810|
+|oil | 870|
+|sunflower oil | 915|
+|olive_oil | 920|
+|water | 1000|
+|sea_water | 1025|
+|glycerin | 1260|
+|sulfuric_acid | 1840|
+|mercury | 13600|
+|sand | 1675|
+|crushed stone | 1350|
+|asphalt | 1060|
+|gravel | 1550|
+|concrete solution | 2100|
+|slag | 3550|
+|clay | 1750|
+|snow | 200|
+|nitrogen | 1251|
+|ammonia | 0.7714|
+|argon | 1.7839|
+|acetylene | 1.1709|
+|hydrogen | 0.08987|
+|air | 1.2928|
+|helium | 0.1785|
+|nitrous_oxide | 1978|
+|oxygen | 1429|
+|krypton | 3.74|
+|xenon | 5.89|
+|methane | 0.7168|
+|neon | 0.8999|
+|ozone | 2.22|
+|nitric_oxide | 1.3402|
+|propane | 2.0037|
+|radon | 9.73|
+|trimethylamine | 2.58|
+|carbon_dioxide | 1.9768|
+|carbon_monoxide | 1.25|
+|carbon_dioxide | 2.72|
+|phosphorous_fluoride | 3907|
+|fluorine | 1695|
+|nitrogen_fluoride | 2.9|
+|chlorine | 3.22|
+|dioxide_of_chlorine | 3.09|
+|chlorine_oxide | 3.89|
+|ethane | 1356|

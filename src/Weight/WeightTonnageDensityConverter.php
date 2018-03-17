@@ -161,8 +161,7 @@ class WeightTonnageDensityConverter
     }
 
     /**
-     * @return float|int
-     * @throws Exception
+     * @return array
      */
     public function getValue()
     {

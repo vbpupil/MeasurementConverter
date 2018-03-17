@@ -9,7 +9,7 @@
 namespace vbpupil\Cubic;
 
 use Chippyash\Type\String\StringType;
-use PHPUnit\Runner\Exception;
+use Exception;
 use vbpupil\LinearUnits\LinearUnitInterface;
 
 /**

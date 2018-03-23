@@ -60,17 +60,12 @@ class Conversion
             $key = key($this->unit->measurements);
             $measure = $this->unit->getValue(new StringType($key));
 
-            echo "my unit is {$key} and my measure is {$measure}<br />";
 
             $newKey = current($linDef->getIdentifier()[$this->desiredSystem]);
             $newMeasure = current($linDef->getDefinitions()[$this->desiredSystem]);
 
-            echo "my NEW unit is {$newKey} and my NEW measure is {$newMeasure}";
-
-//            echo '<br />max: ' .max( array($measure, $newMeasure));
-//            echo '<br />min: ' .min( array($measure, $newMeasure));
-//            echo 'desired measure: '.$this->desiredMeasure;
-
+            //echo "my unit is {$key} and my measure is {$measure}<br />";
+            // echo "my NEW unit is {$newKey} and my NEW measure is {$newMeasure}";
 
             //this is converting metric to imperial
             if( $key == 'mm' && $newKey == 'in') {
@@ -78,14 +73,11 @@ class Conversion
                 return LinearUnitBuilder::build(new FloatType(($dummy->getValue(new StringType($newKey)))), new StringType($newKey));
             }
 
+            //this is converting imperial to metric
             if( $key == 'in' && $newKey == 'mm') {
                 $dummy = LinearUnitBuilder::build(new FloatType(max(array($measure, $newMeasure)) * min(array($measure, $newMeasure))), new StringType($newKey));
                 return LinearUnitBuilder::build(new FloatType(($dummy->getValue(new StringType($newKey)))), new StringType($newKey));
             }
-
-
-
-
 
         }catch (\Exception $e){
             //we havent been able to identify the measurement... abort

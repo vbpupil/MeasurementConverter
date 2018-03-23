@@ -50,6 +50,7 @@ abstract class LinearUnitInterface implements MeasurementUnitInterface
      * LinearUnits constructor.
      * @param FloatType $size
      * @param StringType $type
+     * @throws \Exception
      */
     public function __construct(FloatType $size, StringType $type){
         $type = $this->definitionCheck();

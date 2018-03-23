@@ -61,4 +61,21 @@ class LinearDefinitions
 
         throw new Exception('Unsupported measuring system.');
     }
+
+    /**
+     * @return array
+     */
+    public function getIdentifier()
+    {
+        return $this->identifier;
+    }
+
+    /**
+     * @return array     */
+    public function getDefinitions()
+    {
+        return $this->definitions;
+    }
+
+
 }

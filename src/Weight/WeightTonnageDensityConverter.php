@@ -51,6 +51,8 @@ class WeightTonnageDensityConverter
         'methane' => 0.6682,
         'milk' => 1030,
         'oil' => 850,
+        'olive_oil' => 920,
+
         'oxygen' => 1.429,
         'paint' => 1300,
         'paladius' => 12160,
@@ -63,6 +65,8 @@ class WeightTonnageDensityConverter
         'polypropylene' => 900,
         'polystyrene' => 1050,
         'polyvinyl_chloride' => 1400,
+        'porcelain' => 2300,
+
         'propane' => 1.864,
         'rubber' => 1050,
         'sand' => 1800,
@@ -83,25 +87,55 @@ class WeightTonnageDensityConverter
         'wood_pine' => 520,
         'wood_spruce' => 450,
         'zinc' => 7130,
-        'porcelain' => 2300,
-        'liquid_hydrogen' => 70,
-        'ether' => 740,
-        'gasoline' => 750,
-        'kerosene' => 810,
-        'diesel' => 845,
+
         'acetone' => 795,
+        'acetylene' => 1.1709,
+
+
+        'chlorine_oxide' => 3.89,
+        'chlorine' => 3.22,
+        'crushed stone' => 1350,
+
+
+        'ethane' => 1356,
+
+        'dioxide_of_chlorine' => 3.09,
+        'diesel' => 845,
+
+        'ether' => 740,
+
+        'fluorine' => 1695,
+
+
+        'gasoline' => 750,
+
+        'kerosene' => 810,
+        'krypton' => 3.74,
+
+        'liquid_hydrogen' => 70,
+
+        'mercury' => 13600,
         'methyl_alcohol' => 810,
-        'oil' => 870,
+
+
+        'neon' => 0.8999,
+        'nitrogen_fluoride' => 2.9,
+        'nitric_oxide' => 1.3402,
+
+
+        'ozone' => 2.22,
+
+        'phosphorous_fluoride' => 3907,
+
+        'radon' => 9.73,
+
+
+
         'sunflower oil' => 915,
-        'olive_oil' => 920,
-        'water' => 1000,
+
         'sea_water' => 1025,
         'glycerin' => 1260,
         'sulfuric_acid' => 1840,
-        'mercury' => 13600,
-        'sand' => 1675,
-        'crushed stone' => 1350,
-        'asphalt' => 1060,
         'gravel' => 1550,
         'concrete solution' => 2100,
         'slag' => 3550,
@@ -110,31 +144,12 @@ class WeightTonnageDensityConverter
         'nitrogen' => 1251,
         'ammonia' => 0.7714,
         'argon' => 1.7839,
-        'acetylene' => 1.1709,
         'hydrogen' => 0.08987,
-        'air' => 1.2928,
         'helium' => 0.1785,
         'nitrous_oxide' => 1978,
-        'oxygen' => 1429,
-        'krypton' => 3.74,
         'xenon' => 5.89,
-        'methane' => 0.7168,
-        'neon' => 0.8999,
-        'ozone' => 2.22,
-        'nitric_oxide' => 1.3402,
-        'propane' => 2.0037,
-        'radon' => 9.73,
         'trimethylamine' => 2.58,
-        'carbon_dioxide' => 1.9768,
         'carbon_monoxide' => 1.25,
-        'carbon_dioxide' => 2.72,
-        'phosphorous_fluoride' => 3907,
-        'fluorine' => 1695,
-        'nitrogen_fluoride' => 2.9,
-        'chlorine' => 3.22,
-        'dioxide_of_chlorine' => 3.09,
-        'chlorine_oxide' => 3.89,
-        'ethane' => 1356,
     );
 
     /**

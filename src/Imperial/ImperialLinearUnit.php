@@ -1,6 +1,6 @@
 <?php
 /**
- * Measurement Converter
+ * Imperial Linear Unit
  *
  * @author: Dean Haines
  * @copyright: Dean Haines, 2018, UK

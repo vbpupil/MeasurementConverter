@@ -1,6 +1,6 @@
 <?php
 /**
- * Measurement Converter
+ * Conversion
  *
  * @author: Dean Haines
  * @copyright: Dean Haines, 2018, UK
@@ -16,21 +16,41 @@ use vbpupil\LinearUnitBuilder;
 use vbpupil\LinearUnits\LinearDefinitions;
 use vbpupil\LinearUnits\LinearUnitInterface;
 
+/**
+ * Class Conversion
+ */
 class Conversion
 {
 
+    /**
+     * @var LinearUnitInterface
+     */
     protected $unit;
 
+    /**
+     * @var string
+     */
     protected $desiredMeasure;
 
+    /**
+     * @var string
+     */
     protected $desiredSystem;
 
 
+    /**
+     * Conversion constructor.
+     * @param LinearUnitInterface $unit
+     */
     public function __construct(LinearUnitInterface $unit)
     {
         $this->unit = $unit;
     }
 
+    /**
+     * @param StringType $type
+     * @return mixed
+     */
     public function into(StringType $type)
     {
         $this->desiredMeasure = strtolower($type->get());
@@ -63,9 +83,6 @@ class Conversion
 
             $newKey = current($linDef->getIdentifier()[$this->desiredSystem]);
             $newMeasure = current($linDef->getDefinitions()[$this->desiredSystem]);
-
-            //echo "my unit is {$key} and my measure is {$measure}<br />";
-            // echo "my NEW unit is {$newKey} and my NEW measure is {$newMeasure}";
 
             //this is converting metric to imperial
             if( $key == 'mm' && $newKey == 'in') {

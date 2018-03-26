@@ -1,6 +1,6 @@
 <?php
 /**
- * Measurement Converter
+ * Linear Definitions
  *
  * @author: Dean Haines
  * @copyright: Dean Haines, 2018, UK

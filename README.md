@@ -92,6 +92,24 @@ dump($cubic);
 dump($tonnage->getValue());
 ```
 
+#### Simple Conversion Example
+
+**1. start by creating a simple 20 foot Imperial LinearUnit object**
+```php
+$length = LinearUnitBuilder::build(new FloatType(20), new StringType('ft'));
+```
+
+**2. then convert this into a cm Metric LinearUnit object**
+
+```php
+$length = LinearUnitBuilder::build(
+                    new FloatType((new Conversion($l))->into(
+                        new StringType('cm')
+                    )),
+                    new StringType(
+                        'cm'
+                    ));
+```
 
 #### Supported Materials & Densities
 

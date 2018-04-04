@@ -92,8 +92,15 @@ dump($cubic);
 dump($tonnage->getValue());
 ```
 
-#### Simple Conversion Example
+**2. you can also supply your own density measurement, which will be added to the density array as `custom`**
+```php
+$tonnage = new WeightTonnageDensityConverter(1.2, $cubic);
 
+dump($cubic);
+dump($tonnage->getValue());
+```
+
+#### Simple Conversion Example
 **1. start by creating a simple 20 foot Imperial LinearUnit object**
 ```php
 $length = LinearUnitBuilder::build(new FloatType(20), new StringType('ft'));

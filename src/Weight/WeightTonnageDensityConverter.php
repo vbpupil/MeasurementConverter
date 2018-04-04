@@ -177,6 +177,11 @@ class WeightTonnageDensityConverter
      */
     public function setMaterial($material)
     {
+        if (is_numeric($material)) {
+            $this->density['custom'] = $material;
+            $material = 'custom';
+        }
+
         if (isset($material) && $material != '') {
             $material = strtolower($material);
 
